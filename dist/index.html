@@ -6,45 +6,60 @@
     <link rel="icon" type="image/x-icon" href="./assets/fleapo-logo.jpg" />
     <title>Fleapo</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Accordion styles */
-      .accordion-item {
-          border-bottom: 1px solid #e2e8f0;
-      }
-  
-      .accordion-item-toggle {
-          display: none;
-      }
-  
-      .accordion-item-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          cursor: pointer;
-          padding: 1rem;
-      }
-  
-      .accordion-item-title {
-          margin: 0;
-      }
-  
-      .accordion-item-content {
-          display: none;
-          padding: 1rem;
-      }
-  
-      .accordion-item-toggle:checked + .accordion-item-header + .accordion-item-content {
-          display: block;
-      }
-  
-      .accordion-icon {
-          width: 1.5rem;
-          height: 1.5rem;
-          fill: none;
-          stroke: currentColor;
-      }
-  </style>
-  
+  <style>
+    /* Accordion styles */
+    .accordion-item {
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .accordion-item-toggle {
+        display: none;
+    }
+
+    .accordion-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 1rem;
+    }
+
+    .accordion-item-title {
+        margin: 0;
+    }
+
+    .accordion-item-content {
+        display: none;
+        padding: 1rem;
+    }
+
+    .accordion-item-toggle:checked + .accordion-item-header + .accordion-item-content {
+        display: block;
+    }
+
+    .accordion-icon-open {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: none;
+        stroke: currentColor;
+    }
+
+    .accordion-icon-close {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: none;
+        stroke: currentColor;
+    }
+
+    .accordion-item-toggle:checked + .accordion-item-header .accordion-icon-open {
+        display: none;
+    }
+
+    .accordion-item-toggle:checked + .accordion-item-header .accordion-icon-close {
+        display: block;
+    }
+</style>
+
   </head>
 
   <body class="m-0 p-0 box-border bg-[#F5F8FF] font-serif">
@@ -375,75 +390,116 @@
     <!-- price section end -->
 
     <!-- FAQs section start -->
-    <section>
-      <div>
-        <p></p>
-      </div>
+    <section class="mx-[200px]">
       <div class="faq h-screen relative">
         <div class="faq-container flex justify-between items-center h-full">
-            <div class="left-faq">
-                <div class="faq-title">
-                    <h2 class="text-6xl font-raleway text-primary">Frequently Asked Questions</h2>
+          <!-- left side from accordian -->
+            <div class="left-faq w-[765px] h-[726px] bg-[url('/dist/assets/bgAccordian.svg')] bg-contain bg-no-repeat ">
+                <div class="faq-title w-[454px] h-[216px] font-bold text-[60px] leading-[72px] my-[255px] ml-[183px] mr-[72px]">
+                    <h2 class="text-6xl font-serif text-primary text-[#252432]">Frequently Asked Questions</h2>
                 </div>
             </div>
-            <div class="right-faq w-3/4 md:w-2/5">
-                <div class="accordian bg-white shadow-lg rounded-lg p-6 my-8 cursor-pointer">
-                    <div class="faq-ques flex justify-between items-center">
-                        <div class="ques">
-                            <h5 class="text-lg font-raleway text-primary">How can I contact Inkyy Team?</h5>
-                        </div>
-                        <div class="faq-icon">
-                            <svg class="plus w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                            </svg>
-                            <svg class="minus w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </div>
+            <!-- right accordian -->
+            <div class="right-faq w-3/4 md:w-2/5 ">
+
+                <!-- 1 accordian items -->
+                <div  class="accordion-item accordian bg-white shadow-lg rounded-lg  mb-[16px] cursor-pointer">
+                  <input type="checkbox" id="accordion-item-1" class="accordion-item-toggle">
+                  <label for="accordion-item-1" class="accordion-item-header">
+                      <h5 class="accordion-item-title">How can I contact Inkyy Team?</h5>
+                      <svg class="accordion-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                      <svg class="accordion-icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                    </label>
+                    <div class="accordion-item-content">
+                      <p>You can reach us through our contact form on our website or by emailing us at hello@inkyy.com We typically respond within 24 hours.</p>
                     </div>
-                    <div class="faq-ans py-4 hidden">
-                        <p class="text-base text-secondary">You can reach us through our contact form on our website or by emailing us at <strong>hello@inkyy.com</strong> We typically respond within 24 hours.</p>
+                  </div>
+                  <!-- 2 accordian items -->
+                  <div class="accordion-item accordian bg-white shadow-lg rounded-lg  mb-[16px] cursor-pointer">
+                    <input type="checkbox" id="accordion-item-2" class="accordion-item-toggle">
+                    <label for="accordion-item-2" class="accordion-item-header">
+                        <h5 class="accordion-item-title">What services do you offer?</h5>
+                        <svg class="accordion-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                        <svg class="accordion-icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                    </label>
+                    <div class="accordion-item-content">
+                        <p>This is the content of accordion item 2.</p>
                     </div>
                 </div>
-                <!-- Other accordian items -->
-            </div>
-        </div>
-        <div class="faq-bg absolute top-0 left-0">
-            <img src="faq.png" alt="FAQ background image">
+                  <!-- 3 accordian items -->
+                  <div class="accordion-item accordian bg-white shadow-lg rounded-lg  mb-[16px] cursor-pointer">
+                    <input type="checkbox" id="accordion-item-2" class="accordion-item-toggle">
+                    <label for="accordion-item-2" class="accordion-item-header">
+                        <h5 class="accordion-item-title">Do you provide website maintenance services?</h5>
+                        <svg class="accordion-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                        <svg class="accordion-icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                    </label>
+                    <div class="accordion-item-content">
+                        <p>This is the content of accordion item 2.</p>
+                    </div>
+                </div>
+                  <!-- 4 accordian items -->
+                  <div class="accordion-item accordian bg-white shadow-lg rounded-lg  mb-[16px] cursor-pointer">
+                    <input type="checkbox" id="accordion-item-2" class="accordion-item-toggle">
+                    <label for="accordion-item-2" class="accordion-item-header">
+                        <h5 class="accordion-item-title"> How long does it take to design and develop a website?</h5>
+                        <svg class="accordion-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                        <svg class="accordion-icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                    </label>
+                    <div class="accordion-item-content">
+                        <p>This is the content of accordion item 2.</p>
+                    </div>
+                </div>
+                  <!-- 5 accordian items -->
+                  <div class="accordion-item accordian bg-white shadow-lg rounded-lg  mb-[16px] cursor-pointer">
+                    <input type="checkbox" id="accordion-item-2" class="accordion-item-toggle">
+                    <label for="accordion-item-2" class="accordion-item-header">
+                        <h5 class="accordion-item-title">Do you require a deposit for projects?</h5>
+                        <svg class="accordion-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                        <svg class="accordion-icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                    </label>
+                    <div class="accordion-item-content">
+                        <p>This is the content of accordion item 2.</p>
+                    </div>
+                </div>
+
         </div>
     </div>
     </section>
     <!-- FAQs section end -->
+  
+  <!-- form section start -->
+  <section class=" w-[1440px] ml-[100px] bg-[url('/dist/assets/bgFormGradient.svg')] bg-contain bg-no-repeat">
+    <div class="ml-[1107px] mt-[36px] mr-[38.36px]  mb-[-300px] z-0">
+      <img class="ml-[-50px]" src="./assets/bgFormTop.svg" alt="">
+    </div>
+    <div class="w-[696px] mt-[124px] mb-[103px] mx-[372px]  ">
+      <p class="w-[555px] h-[72px] font-bold text-[60px] leading-[72px] text-center">Let’s Get in Touch</p>
+    </div>
+    <div class="mx-[372px] border">
+      <label class="w-[48px] h-[22px] mb-[10px] ml-[7px] block">email</label>
+      <input type="text" class="block" placeholder="example@email.com">
 
+      <label class="w-[48px] h-[22px] mb-[10px] ml-[7px] block">email</label>
+      <input type="text" class="block" placeholder="example@email.com">
 
-    <div class="accordion">
-      <div class="accordion-item">
-          <input type="checkbox" id="accordion-item-1" class="accordion-item-toggle">
-          <label for="accordion-item-1" class="accordion-item-header">
-              <h5 class="accordion-item-title">Accordion Item 1</h5>
-              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-          </label>
-          <div class="accordion-item-content">
-              <p>This is the content of accordion item 1.</p>
-          </div>
-      </div>
-  
-      <div class="accordion-item">
-          <input type="checkbox" id="accordion-item-2" class="accordion-item-toggle">
-          <label for="accordion-item-2" class="accordion-item-header">
-              <h5 class="accordion-item-title">Accordion Item 2</h5>
-              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-          </label>
-          <div class="accordion-item-content">
-              <p>This is the content of accordion item 2.</p>
-          </div>
-      </div>
-  
-      <!-- Add more accordion items as needed -->
-  </div>
-  
-  
+      <label class="w-[48px] h-[22px] mb-[10px] ml-[7px] block">email</label>
+      <input type="text" class="block" placeholder="example@email.com">
+      
+      <button>Get in Touch</button>
+    </div>
+    <img class="mt-[-100px]" src="./assets/bgFormLeft.svg" alt="">
+
     
+    <!-- footer start -->
+    <div>
+      
+    </div>
+    <!-- footer end -->
+
+
+  </section>
+  <!-- form section end -->
 
 
   </body>
