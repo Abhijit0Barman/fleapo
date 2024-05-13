@@ -10,8 +10,8 @@
 **HTML** | 
 **CSS**  |
 **JS** 
-**Vite** 
-**Tailwind CSS** 
+<!-- **Vite** 
+**Tailwind CSS**  -->
 
 
 ## Run Locally
@@ -22,13 +22,11 @@ Clone the project
   git clone https://github.com/Abhijit0Barman/fleapo.git
 ```
 
-```bash
+<!-- ```bash
   run npm run build
-```
+``` -->
 ```bash
   run index.html via live server
 ```
 
 ## Screenshots
-
-![2024-05-12 23 33 14](https://github.com/Abhijit0Barman/fleapo/assets/113384779/777c47b8-5ea8-44b0-b2ad-d4f5c8acfa54)
